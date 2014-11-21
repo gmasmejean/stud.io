@@ -1,28 +1,16 @@
-var context = require('./context/context.js');
+var context = require('../lib/context/context.js');
 context.prototype.requestIp = function(){
     return '127.0.0.1';
 };
-var helper_session = require('./helpers/session/helper.js');
-var app = require('./application/application.js');
+var helper_session = require('../lib/helpers/session/helper.js');
+var app = require('../lib/application/application.js');
 
 
 
 var a = new app({
-    helpers:{
-        cookies:'helpers/cookies/helper.js'
-    },
     events:{
         error: function( err ){
             console.log( err );
-        }
-    },
-    services:{
-        session:{
-            unique: true, //false,
-            adapter: '../node_modules/nfw/helpers/session/memory/adapter.js',
-            memcache:{
-                
-            },
         }
     }
 });

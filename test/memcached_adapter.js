@@ -1,4 +1,4 @@
-/*var context = require('./context/context.js');
+var context = require('./context/context.js');
 context.prototype.requestIp = function(){
     return '127.0.0.1';
 };
@@ -14,15 +14,6 @@ var a = new app({
     events:{
         error: function( err ){
             console.log( err );
-        }
-    },
-    services:{
-        session:{
-            unique: true, //false,
-            adapter: '../node_modules/nfw/helpers/session/memory/adapter.js',
-            memcache:{
-                
-            },
         }
     }
 });
@@ -57,4 +48,4 @@ help.setValue({},'je suis une valeur.',function(err,datas){
 });
 help.setValue('bob',function(){},function(err,datas){
     console.log('setValue invalid value',err,datas);
-});*/
+});
