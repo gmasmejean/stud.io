@@ -8,7 +8,12 @@
     "author": "Guillaume Masmejean <guillaume.masmejean@gmail.com>, Nicolas Maremmani <n.maremmani@gmail.com>",
     "main": "./lib/application/application.js",
     "scripts": {},
-    "devDependencies": {},
+    "dependencies": {
+        "memcached":"latest",
+        "redis":"latest"
+    },
+    "devDependencies": {
+    },
     "repository": {
         "type": "git",
         "url": "https://github.com/gmasmejean/stud.io.git"
