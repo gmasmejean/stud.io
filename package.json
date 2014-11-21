@@ -1,0 +1,16 @@
+{
+    "name": "stud.io",
+    "version": "0.0.1",
+    "description": "Node.js framework",
+    "keywords": [
+        "framework"
+    ],
+    "author": "Guillaume Masmejean <guillaume.masmejean@gmail.com>, Nicolas Maremmani <n.maremmani@gmail.com>",
+    "main": "./lib/application/application.js",
+    "scripts": {},
+    "devDependencies": {},
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/gmasmejean/stud.io.git"
+    }
+}
