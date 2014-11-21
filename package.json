@@ -17,5 +17,8 @@
     "repository": {
         "type": "git",
         "url": "https://github.com/gmasmejean/stud.io.git"
+    },
+    "bugs":{
+        "url":"https://github.com/gmasmejean/stud.io/issues"
     }
 }
