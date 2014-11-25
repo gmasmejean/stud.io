@@ -13,6 +13,8 @@
         "redis":"latest"
     },
     "devDependencies": {
+	"mocha": "*",
+	"should": "*"
     },
     "repository": {
         "type": "git",
