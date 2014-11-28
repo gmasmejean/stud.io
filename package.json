@@ -10,7 +10,8 @@
     "scripts": {},
     "dependencies": {
         "memcached":"latest",
-        "redis":"latest"
+        "redis":"latest",
+        "jhtml":"latest"
     },
     "devDependencies": {
     },
