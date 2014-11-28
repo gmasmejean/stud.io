@@ -14,19 +14,19 @@ var a = new app({
     },
     options:{
         session:{
-            adapter: '../../helpers/session/memcached/adapter'
+            adapter: '../../helpers/session/redis/adapter'
         }
     }
 });
 var ctx = new context(a,{headers:{}},{});
 var help = new helper_session( ctx );
 
-describe('Memcached Adapter',function(){
-    it('get with no session returns error MCA_IK',function(done){
+describe('Redis Adapter',function(){
+    it('get with no session returns error RA_IK',function(done){
         help.get(function(err,datas){
             err.should.instanceOf(Object).properties({
-                name:'MEMCACHED_ADAPTER_INVALID_KEY',
-                code:'MCA_IK',
+                name:'REDIS_ADAPTER_INVALID_KEY',
+                code:'RA_IK',
                 message:'This session does not exist.'
             });
             done();
@@ -59,7 +59,7 @@ describe('Memcached Adapter',function(){
     it('get',function(done){
         help.get(function(err,datas){
             datas.should.instanceOf(Object).properties({
-                blabla:123456,
+                blabla:'123456',
                 plop:'Salut !'
             });
             done();
@@ -74,8 +74,8 @@ describe('Memcached Adapter',function(){
     it('get after destroy',function(done){
         help.get(function(err,datas){
             err.should.instanceOf(Object).properties({
-                name:'MEMCACHED_ADAPTER_INVALID_KEY',
-                code:'MCA_IK',
+                name:'REDIS_ADAPTER_INVALID_KEY',
+                code:'RA_IK',
                 message:'This session does not exist.'
             });
             done();
