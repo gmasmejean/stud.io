@@ -10,8 +10,7 @@
     "scripts": {},
     "dependencies": {
         "memcached":"latest",
-        "redis":"latest",
-        "jhtml":"latest"
+        "redis":"latest"
     },
     "devDependencies": {
 	"mocha": "*",
@@ -23,5 +22,8 @@
     },
     "bugs":{
         "url":"https://github.com/gmasmejean/stud.io/issues"
+    },
+    "scripts":{
+        "test":"mocha test/test.js"
     }
 }
